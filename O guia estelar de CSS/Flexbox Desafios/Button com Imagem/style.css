@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rowdies", cursive;
+}
+
+header {
+  padding: 2rem;
+
+  height: 100px;
+  border-bottom: 2px solid #000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  gap: 0.8rem;
+}
+
+ul:hover {
+  cursor: pointer;
+}
+
+li button:last-child {
+  background-color: blue;
+  color: white;
+
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  height: 80vh;
+}
+
+aside {
+  background-color: lightgray;
+  flex-basis: 25%;
+
+  border: 1px solid #000;
+}
+
+main {
+  flex: 1;
+  border: 1px solid #000;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.fotos {
+  width: 15%;
+  height: auto;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  height: 100px;
+}
+
+button {
+  display: flex;
+  height: 50px;
+  width: 100px;
+  
+  justify-content: space-around;
+  align-items: center;
+  
+  cursor: pointer;
+}
+
+.cancelar {
+  background-color: rgb(226, 90, 90);
+}
+
+.confirmar {
+  background-color: rgb(123, 218, 123);
+}

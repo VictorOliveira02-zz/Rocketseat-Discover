@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rowdies", cursive;
+}
+
+header {
+  padding: 2rem;
+
+  height: 100px;
+  border-bottom: 2px solid #000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  gap: 0.8rem;
+}
+
+ul:hover {
+  cursor: pointer;
+}
+
+li button:last-child {
+  background-color: blue;
+  color: white;
+
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}

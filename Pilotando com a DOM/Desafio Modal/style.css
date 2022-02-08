@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rowdies", cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #121214;
+}
+
+button {
+  width: 200px;
+  height: 100px;
+
+  background-color: #2d2d30;
+  color: #fff;
+  font-size: 20px;
+
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #1d1d21;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(238, 229, 229, 0.5);
+}
+
+.hide {
+  display: none;
+}
