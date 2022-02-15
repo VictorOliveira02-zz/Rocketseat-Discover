@@ -12,8 +12,8 @@
   "dependencies": {
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
+    "sequelize": "^6.16.1",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2"
-  },
-  "type": "module"
+  }
 }

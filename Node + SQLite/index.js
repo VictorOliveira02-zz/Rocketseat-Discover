@@ -1,31 +1,20 @@
-import { createStudentTable, insertStudent, updateStudent, allStudents, deleteStudent } from './src/Controller/aluno.js';
+const express = require("express");
+const database = require('./db.js');
 
-import express from "express";
 const app = express();
+
 app.use(express.json());
+app.use('/api', require('./src/controller/student/routes.js'));
 
-createStudentTable();
+async function main() {
+    try {
+        await database.sync();
+        app.listen(3000, () => {
+            console.log('Server is running on port 3000');
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-app.get('/', async (req, res) => {
-    let students = await allStudents()
-    res.json(students);
-});
-
-app.post('/alumni', (req, res) => {
-    insertStudent(req.body)
-    res.send('Success Insert');
-})
-
-app.put('/alumni/update', (req, res) => {
-    updateStudent(req.body)
-    res.send('Success Update');
-})
-
-app.delete('/alumni/delete/:id', (req, res) => {
-    deleteStudent(req.params.id)
-    res.send('Success Delete');
-})
-
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-})
+main()
